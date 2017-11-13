@@ -28,16 +28,16 @@ int main(int argc, char* argv[])
 	bool set[3];
 
 	init_console();
-	menu(ctrl);
-	setting(set);
 
-	if (game.init(ctrl, set)){
-		system("pause");
+	while (1) {
+		menu(ctrl);
+		setting(set);
+		game.init(ctrl, set);
+		game.reprint();
+		point = game.GameLoop();
 	}
-	game.reprint();
-	point = game.GameLoop();
 
-	return 100 + point;
+	return 0;
 }
 
 

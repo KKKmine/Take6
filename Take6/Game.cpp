@@ -78,10 +78,6 @@ bool Game::init(int *ctrl, bool *setting)
 	else{
 		isOneHuman = false;
 	}
-	if (player_num == 0){
-		cout << "No Player" << endl;
-		return 1;
-	}
 
 	shuffler(setting[2]);
 	return 0;
